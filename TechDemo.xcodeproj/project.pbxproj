@@ -93,6 +93,7 @@
 		1592276824C2EDD0008B886C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = Tech;
 				LastSwiftUpdateCheck = 1160;
 				LastUpgradeCheck = 1160;
 				ORGANIZATIONNAME = "Sachchida Nand Mishra";
@@ -287,6 +288,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JHRHBHPBUX;
 				INFOPLIST_FILE = TechDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,6 +307,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JHRHBHPBUX;
 				INFOPLIST_FILE = TechDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
