@@ -20,11 +20,17 @@ class TechViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(self.refreshData))
+        //
         view.backgroundColor = .white
         view.addSubview(listTableView)
         listTableView.delegate = TableViewModel.instance
         listTableView.dataSource = TableViewModel.instance
         setupTableViewLayout()
+        refreshData()
+    }
+    
+    @objc private func refreshData() {
         DataModel.getData(from: Constants().dataURL, success: {response in
             DispatchQueue.main.async {
                 [unowned self] in

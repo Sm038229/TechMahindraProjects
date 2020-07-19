@@ -9,6 +9,5 @@
 import Foundation
 
 struct Constants {
-    let defaultURL: String = "https://api.myjson.com/bins/yfua8"
     let dataURL: String = "https://dl.dropboxusercontent.com/s/2iodh4vg0eortkl/facts.json"
 }

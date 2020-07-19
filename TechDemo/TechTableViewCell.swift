@@ -69,16 +69,17 @@ class TechTableViewCell: UITableViewCell {
     
     public func configure(from responseResult:ResponseDataResult) {
         cellHeadingLabel.text = responseResult.resultTitle
-        cellPhotoImageView.sd_setImage(with: responseResult.resultImageURL, placeholderImage: nil)
+        let imageURL = responseResult.resultImageURL
+        cellPhotoImageView.sd_setImage(with: imageURL, placeholderImage: UIImage(named: "blog"))
         cellDescriptionLabel.text = responseResult.resultDescription
     }
     
     
     private func setupStackviewLayout() {
-        verticalStackView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-        verticalStackView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
-        verticalStackView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
-        verticalStackView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
+        verticalStackView.topAnchor.constraint(equalTo: self.topAnchor, constant: 10).isActive = true
+        verticalStackView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 10).isActive = true
+        verticalStackView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10).isActive = true
+        verticalStackView.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -10).isActive = true
     }
 
 }
