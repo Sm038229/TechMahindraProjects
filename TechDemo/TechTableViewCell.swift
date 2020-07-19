@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class TechTableViewCell: UITableViewCell {
 
@@ -23,7 +24,7 @@ class TechTableViewCell: UITableViewCell {
     let cellHeadingLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
-        label.font = UIFont(name: "AvenirNext-Regular", size: 16)
+        label.font = UIFont(name: "AvenirNext-Bold", size: 16)
         return label
     }()
     //
@@ -68,6 +69,7 @@ class TechTableViewCell: UITableViewCell {
     
     public func configure(from responseResult:ResponseDataResult) {
         cellHeadingLabel.text = responseResult.resultTitle
+        cellPhotoImageView.sd_setImage(with: responseResult.resultImageURL, placeholderImage: nil)
         cellDescriptionLabel.text = responseResult.resultDescription
     }
     

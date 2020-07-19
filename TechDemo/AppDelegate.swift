@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //
         let navigationController = TechNavigationViewController()
         let rootViewController = TechViewController()
-        rootViewController.title = "List"
+        //rootViewController.title = "List"
         navigationController.viewControllers = [rootViewController]
         //
         window = UIWindow(frame: UIScreen.main.bounds)
