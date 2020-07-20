@@ -9,7 +9,6 @@
 import UIKit
 
 class TechViewController: UIViewController {
-    
     let listTableView: UITableView = {
         let tableView = UITableView()
         tableView.register(TechTableViewCell.self, forCellReuseIdentifier: TableViewModel.cellIdentifier)
@@ -26,17 +25,22 @@ class TechViewController: UIViewController {
         view.addSubview(listTableView)
         listTableView.delegate = TableViewModel.instance
         listTableView.dataSource = TableViewModel.instance
+        listTableView.tableFooterView = UIView()
         setupTableViewLayout()
         refreshData()
     }
     
     @objc private func refreshData() {
+        ProgressView.shared.showLoader(for: self)
         DataModel.getData(from: Constants().dataURL, success: {response in
             DispatchQueue.main.async {
                 [unowned self] in
                 self.title = response.responseTitle
                 self.listTableView.reloadData()
+                ProgressView.shared.dismissLoader()
             }
+        }, failure: {
+            ProgressView.shared.dismissLoader()
         })
     }
     

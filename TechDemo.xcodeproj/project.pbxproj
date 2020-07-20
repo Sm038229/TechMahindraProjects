@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1581E20424C56C4F00AB71B5 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1581E20324C56C4F00AB71B5 /* ProgressView.swift */; };
 		158FD82C24C42175005B2D25 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158FD82B24C42175005B2D25 /* DataModel.swift */; };
 		158FD82E24C42337005B2D25 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158FD82D24C42337005B2D25 /* Constants.swift */; };
 		1592277424C2EDD0008B886C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1592277324C2EDD0008B886C /* AppDelegate.swift */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		152ABABCEA57F8CD2E45075F /* Pods_TechDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TechDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1581E20324C56C4F00AB71B5 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		158FD82B24C42175005B2D25 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		158FD82D24C42337005B2D25 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1592277024C2EDD0008B886C /* TechDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TechDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,6 +78,7 @@
 				1592278B24C2F46A008B886C /* TechViewController.swift */,
 				15BADF9F24C40949000E5C19 /* TableViewModel.swift */,
 				15BADFA124C4101E000E5C19 /* TechTableViewCell.swift */,
+				1581E20324C56C4F00AB71B5 /* ProgressView.swift */,
 				1592277C24C2EDD1008B886C /* Assets.xcassets */,
 				1592277E24C2EDD1008B886C /* LaunchScreen.storyboard */,
 				1592278124C2EDD1008B886C /* Info.plist */,
@@ -220,6 +223,7 @@
 				15BADFA224C4101E000E5C19 /* TechTableViewCell.swift in Sources */,
 				1592278C24C2F46A008B886C /* TechViewController.swift in Sources */,
 				158FD82E24C42337005B2D25 /* Constants.swift in Sources */,
+				1581E20424C56C4F00AB71B5 /* ProgressView.swift in Sources */,
 				15BADFA024C40949000E5C19 /* TableViewModel.swift in Sources */,
 				158FD82C24C42175005B2D25 /* DataModel.swift in Sources */,
 			);

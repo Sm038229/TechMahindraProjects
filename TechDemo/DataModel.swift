@@ -41,15 +41,18 @@ class DataModel {
     static let instance = DataModel()
     var responseResultData: ResponseData?
     
-    public static func getData(from urlString:String, success:@escaping(ResponseData)->(Void)){
+    public static func getData(from urlString:String, success:@escaping(ResponseData)->(Void), failure:@escaping()->(Void)){
         guard let url = NSURL(string: urlString) else {
             print(JSONError.NoURL)
+            failure()
             return
         }
         
         let request = NSMutableURLRequest(url:url as URL)
         URLSession.shared.dataTask(with: request as URLRequest) { (data, response, error) in
             guard let responseData = data else {
+                print(JSONError.NoData)
+                failure()
                 return
             }
             
@@ -60,6 +63,7 @@ class DataModel {
                 success(response)
             } else {
                 print(JSONError.ConversionFailed)
+                failure()
             }
         }.resume()
     }
